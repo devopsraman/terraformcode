@@ -1,3 +1,18 @@
+
+terraform {
+  backend "azurerm" {
+    storage_account_name  = "tstate09762"
+    container_name        = "tstate"
+    key                   = "terraform.tfstate"
+  }
+}
+
+resource "azurerm_resource_group" "state-demo-secure" {
+  name     = "state-demo"
+  location = "eastus"
+}
+
+
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
     subscription_id = "47aecb40-f45d-49a7-a070-7c748616ec94"
