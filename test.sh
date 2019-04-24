@@ -1,3 +1,4 @@
+cd ..
 mkdir infrav1.0
 cp -R terraformcode/*.sh infrav1.0
 cp -R terraformcode/*.tf infrav1.0
